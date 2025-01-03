@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import UploadView from './endpoints/UploadView';
@@ -7,13 +7,15 @@ import MonitorView from './endpoints/MonitorView';
 import ResultView from './endpoints/ResultView';
 
 function App() {
+  const [shardingStatus, setShardingStatus] = useState({ status: 'Idle', message: '' });
+
   return (
     <>
       <Navbar />
       <div className="container">
         <UploadView />
         <ShardView />
-        <MonitorView />
+        <MonitorView shardingStatus={shardingStatus} setShardingStatus={setShardingStatus} />
         <ResultView />
       </div>
       <Footer />

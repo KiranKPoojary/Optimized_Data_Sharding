@@ -5,7 +5,9 @@ function ResultView() {
   const [metadata, setMetadata] = useState([]);
 
   useEffect(() => {
-    getResults().then((response) => setMetadata(response.data));
+    getResults()
+      .then((response) => setMetadata(response.data))
+      .catch((error) => console.error('Failed to fetch metadata:', error));
   }, []);
 
   return (

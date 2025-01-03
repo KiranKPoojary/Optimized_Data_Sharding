@@ -1,12 +1,18 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from werkzeug.utils import secure_filename
 from sharding import perform_sharding
 from metadata import get_metadata
 import os
 import threading
 import time
+import logging
+
 
 app = Flask(__name__)
+
+# Enable CORS for all routes
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Configuration
 UPLOAD_FOLDER = 'uploads'
@@ -36,7 +42,7 @@ def upload_file():
     filepath = os.path.join(UPLOAD_FOLDER, filename)
     file.save(filepath)
 
-    return jsonify({"message": "File uploaded successfully", "filename": filename})
+    return jsonify({"message": "File uploaded successfully", "filename": filename}), 200
 
 
 @app.route('/start_sharding', methods=['POST'])
@@ -45,7 +51,15 @@ def start_sharding():
     filename = request.json.get('filename')
     algorithm = request.json.get('algorithm')
 
-    filepath = os.path.join(UPLOAD_FOLDER, filename)
+    if not filename or not algorithm:
+        return jsonify({"error": "Filename or algorithm is missing"}), 400
+
+    filepath = os.path.abspath(os.path.join(UPLOAD_FOLDER, filename))
+    logging.debug(f"Sharding started for file: {filepath} using algorithm: {algorithm}")
+
+    if not os.path.exists(filepath):
+        logging.error(f"File not found: {filepath}")
+        return jsonify({"error": f"File '{filename}' not found at {filepath}"}), 400
 
     def shard_task():
         global sharding_status

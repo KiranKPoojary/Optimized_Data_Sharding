@@ -1,22 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { getShardingStatus } from '../services/api';
+import React, { useEffect } from 'react';
+import { initWebSocket, closeWebSocket } from '../services/websocket';
 
-function MonitorView() {
-  const [status, setStatus] = useState({});
-
+function MonitorView({ shardingStatus, setShardingStatus }) {
   useEffect(() => {
-    const interval = setInterval(() => {
-      getShardingStatus().then((response) => setStatus(response.data));
-    }, 2000);
+    initWebSocket((data) => setShardingStatus(data));
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => closeWebSocket();
+  }, [setShardingStatus]);
 
   return (
     <section>
       <h2>Sharding Progress</h2>
-      <p>Status: {status.status}</p>
-      <p>Message: {status.message}</p>
+      <p>Status: {shardingStatus.status}</p>
+      <p>Message: {shardingStatus.message}</p>
     </section>
   );
 }
