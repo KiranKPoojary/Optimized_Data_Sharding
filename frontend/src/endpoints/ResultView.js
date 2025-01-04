@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { getResults } from '../services/api';
+import React from 'react';
 
-function ResultView() {
-  const [metadata, setMetadata] = useState([]);
-
-  useEffect(() => {
-    getResults()
-      .then((response) => setMetadata(response.data))
-      .catch((error) => console.error('Failed to fetch metadata:', error));
-  }, []);
+function ResultView({ metadata }) {
+  // Check if metadata is valid before attempting to map
+  if (!metadata || metadata.length === 0) {
+    return <p>No results available.</p>;
+  }
 
   return (
     <section>
