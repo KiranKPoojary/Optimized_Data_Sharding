@@ -5,26 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43a693cf-69aa-465c-a5c4-6d90952be9ee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/sharding.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/sharding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/shards/shard_0.csv" beforeDir="false" afterPath="$PROJECT_DIR$/backend/shards/shard_0.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/shards/shard_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/backend/shards/shard_1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/shards/shard_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/backend/shards/shard_2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/shards/shard_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/backend/shards/shard_3.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/shards/shard_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/backend/shards/shard_4.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/0.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/1.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/2.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/3.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/4.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/index.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/index.pack.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/endpoints/MonitorView.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/endpoints/MonitorView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/endpoints/ResultView.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/endpoints/ResultView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/api.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
